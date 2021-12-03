@@ -20,16 +20,15 @@ let request = {
 class Metrics {
   constructor(hostname) {
     this.hostname = hostname;
+    request.hostname = this.hostname;
   }
 
   async getData(doi) {
-    request.hostname = this.hostname;
     request.params = "events?aggregation=measure_uri&filter=work_uri:info:doi:";
     return request.get(doi);
   }
 
   async getGeoData(doi) {
-    request.hostname = this.hostname;
     request.params =
       "events?aggregation=country_uri,measure_uri&filter=work_uri:info:doi:";
     return request.get(doi);
