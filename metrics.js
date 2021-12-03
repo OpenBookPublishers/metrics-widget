@@ -1,39 +1,38 @@
+let request = {
+  hostname: "",
+  params: "",
+  get: async function (doi) {
+    try {
+      const cleanDoi = checkDOI(doi);
+      const url = new URL(this.hostname + this.params + cleanDoi);
+      const res = await fetch(url);
+      const data = await res.json();
+      // check data
+      await checkData(data);
+      return data;
+    } catch (e) {
+      console.error(e);
+      return null;
+    }
+  },
+};
+
 class Metrics {
   constructor(hostname) {
     this.hostname = hostname;
   }
 
   async getData(doi) {
-    try {
-      const cleanDoi = checkDOI(doi);
-      const params = "events?aggregation=measure_uri&filter=work_uri:info:doi:";
-      const url = new URL(this.hostname + params + cleanDoi);
-      const res = await fetch(url);
-      const data = await res.json();
-      // check data
-      await checkData(data);
-      return data;
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    request.hostname = this.hostname;
+    request.params = "events?aggregation=measure_uri&filter=work_uri:info:doi:";
+    return request.get(doi);
   }
 
   async getGeoData(doi) {
-    try {
-      const cleanDoi = checkDOI(doi);
-      const params =
-        "events?aggregation=country_uri,measure_uri&filter=work_uri:info:doi:";
-      const url = new URL(this.hostname + params + cleanDoi);
-      const res = await fetch(url);
-      const data = await res.json();
-      // check data
-      await checkData(data);
-      return data;
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    request.hostname = this.hostname;
+    request.params =
+      "events?aggregation=country_uri,measure_uri&filter=work_uri:info:doi:";
+    return request.get(doi);
   }
 }
 
