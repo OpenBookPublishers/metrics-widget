@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "doi-prop-type": "^1.0.2",
-    "prop-types": "^15.7.2",
     "url-prop-type": "^1.2.4"
   }
 }
