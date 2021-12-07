@@ -1,8 +1,8 @@
 {
   "name": "metrics-widget",
   "version": "1.0.0",
-  "description": "Show book metrics",
-  "main": "widget.js",
+  "description": "Display book usage metrics",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/babel lib --out-file index.js"
@@ -11,8 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/OpenBookPublishers/metrics-widget.git"
   },
-  "author": "Zagyarakushi",
-  "license": "ISC",
+  "keywords": [
+    "metrics",
+    "book metrics",
+    "chart"
+  ],
+  "author": "Joi Mizushima <joi@openbookpublishers.com>",
+  "contributors": ["Javier Arias <javi@openbookpublishers.com"],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/OpenBookPublishers/metrics-widget/issues"
   },
