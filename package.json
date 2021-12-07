@@ -1,18 +1,28 @@
 {
   "name": "metrics-widget",
   "version": "1.0.0",
-  "description": "Show book metrics",
-  "main": "widget.js",
+  "description": "Display book usage metrics",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel lib --out-file index.js"
+    "build": "webpack",
+    "clean": "rm -rf ./dist",
+    "dist": "yarn clean && yarn build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OpenBookPublishers/metrics-widget.git"
   },
-  "author": "Zagyarakushi",
-  "license": "ISC",
+  "keywords": [
+    "metrics",
+    "book metrics",
+    "chart"
+  ],
+  "author": "Joi Mizushima <joi@openbookpublishers.com>",
+  "contributors": [
+    "Javier Arias <javi@openbookpublishers.com"
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/OpenBookPublishers/metrics-widget/issues"
   },
@@ -25,7 +35,9 @@
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "peerDependencies": {
     "react": "^17.0.2",

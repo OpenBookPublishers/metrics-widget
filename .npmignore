@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.eslintcache
+node_modules
+npm-debug.log
+.github
+lib/
+test/
+*.test.js
+coverage/
