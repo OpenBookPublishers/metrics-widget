@@ -1,5 +1,7 @@
 # Metrics Widget
 
+This package is used to display book usage statistics, consuming a [HIRMEOS Metrics API](https://github.com/hirmeos/metrics-api).
+
 ## Installation
 
 To install via npm:
