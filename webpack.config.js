@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -15,7 +16,27 @@ module.exports = {
         test: /\.js?$/,
         exclude: /(node_modules)/,
         use: 'babel-loader',
-      }
+      },
+      {
+        test: /\.css?$/i,
+        exclude: /(node_modules)/,
+        use: [
+          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+        ]
+      },
     ],
   },
   resolve: {
@@ -38,5 +59,11 @@ module.exports = {
       amd: "ReactDOM",
       root: "ReactDOM"
     }
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'index.css',
+      chunkFilename: '[id].css'
+    }),
+  ],
 };
