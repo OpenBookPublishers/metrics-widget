@@ -6,6 +6,8 @@
 
 This package is used to display book usage statistics, consuming a [HIRMEOS Metrics API](https://github.com/hirmeos/metrics-api).
 
+![Screenshot of Metrics Widget](https://www.openbookpublishers.com/shopimages/metrics-widget.png)
+
 ## Installation
 
 To install via npm:
@@ -39,9 +41,8 @@ import MetricsWidget from 'metrics-widget';
 
 // ...
 const doi = "10.11647/obp.0001";
-const apiEndpoint = "https://metrics.operas-eu.org/";
 return (
-  <MetricsWidget apiEndpoint={apiEndpoint} doi={doi} />
+  <MetricsWidget doi={doi} />
 )
 // ...
 ```
@@ -70,10 +71,19 @@ return (
     <div id="metrics-widget"></div>
     <script>
       let doi = "10.11647/obp.0001";
-      let apiEndpoint = "https://metrics-api.operas-eu.org/";
-      metricsWidget(document.getElementById('metrics-widget'), doi, apiEndpoint)
+      metricsWidget(document.getElementById('metrics-widget'), doi)
     </script>
   </body>
 </html>
 ```
 
+## Configuration
+
+Both the react component and the vanilla JS function support the following parameters:
+
+
+| Parameter       | Required | Default                                | Description                                         |
+|-----------------|:--------:|----------------------------------------|-----------------------------------------------------|
+| `doi`           | required | n/a                                    | The DOI of the work we are displaying data about.   |
+| `apiEndpoint`   | optional | `"https://metrics-api.operas-eu.org/"` | The API to consume.                                 |
+| `fullReportUrl` | optional | `undefined`                            | Optional URL to a more detailed vie of the metrics. |
