@@ -23,9 +23,10 @@ yarn add metrics-widget
 To use CDN:
 
 ```html
-    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/metrics-widget"></script>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/metrics-widget@1/dist/index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/metrics-widget@1/dist/index.css">
 ```
 
 ## Usage
@@ -62,14 +63,17 @@ return (
       src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"
       crossorigin
     ></script>
-    <!-- Import the metrics widget -->
-    <script src="https://unpkg.com/metrics-widget@1.0.0/dist/index.js"></script>
+    <!-- Import metrics widget -->
+    <script src="https://unpkg.com/metrics-widget@1/dist/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/metrics-widget@1/dist/index.css">
+    <!-- Render widget -->
     <div id="metrics-widget"></div>
     <script>
       let doi = "10.11647/obp.0001";
-      let apiEndpoint = "https://metrics.operas-eu.org/";
+      let apiEndpoint = "https://metrics-api.operas-eu.org/";
       metricsWidget(document.getElementById('metrics-widget'), doi, apiEndpoint)
     </script>
   </body>
+</html>
 ```
 
