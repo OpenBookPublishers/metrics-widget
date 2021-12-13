@@ -54,6 +54,7 @@
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "chart.js": "^3.6.2",
+    "chartjs-chart-geo": "^3.6.0",
     "doi-prop-type": "^1.0.2",
     "react-chartjs-2": "^4.0.0",
     "spinners-react": "^1.0.6",
