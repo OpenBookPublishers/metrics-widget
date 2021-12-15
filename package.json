@@ -55,7 +55,9 @@
     "@heroicons/react": "^1.0.5",
     "chart.js": "^3.6.2",
     "doi-prop-type": "^1.0.2",
+    "file-saver": "^2.0.5",
     "react-chartjs-2": "^4.0.0",
+    "react-json-to-csv": "^1.0.4",
     "spinners-react": "^1.0.6",
     "url-prop-type": "^1.2.4"
   }
