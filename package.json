@@ -54,7 +54,7 @@
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "chart.js": "^3.6.2",
-    "doi-prop-type": "^1.0.2",
+    "doi-prop-type": "^1.1.0",
     "file-saver": "^2.0.5",
     "react-chartjs-2": "^4.0.0",
     "react-json-to-csv": "^1.0.4",
