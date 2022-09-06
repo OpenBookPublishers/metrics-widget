@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: [
     'plugin:react/recommended',
@@ -15,7 +16,12 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jest',
   ],
   rules: {
+    "indent": ["error", 4],
+    "react/jsx-indent": ["error", 4],
+    "react/jsx-indent-props": ["error", 4],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
 };
