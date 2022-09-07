@@ -1,5 +1,6 @@
 # Metrics Widget
 
+[![Build](https://github.com/OpenBookPublishers/metrics-widget/actions/workflows/build_test_and_check.yml/badge.svg)](https://github.com/OpenBookPublishers/metrics-widget/actions/workflows/build_test_and_check.yml)
 [![npm](https://img.shields.io/npm/v/metrics-widget.svg)](https://www.npmjs.com/package/metrics-widget)
 ![GitHub](https://img.shields.io/github/license/OpenBookPublishers/metrics-widget)
 
