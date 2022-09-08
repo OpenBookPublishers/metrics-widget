@@ -26,8 +26,8 @@ yarn add metrics-widget
 To use CDN:
 
 ```html
-<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/metrics-widget@1/dist/index.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/metrics-widget@1/dist/index.css">
 ```
@@ -58,11 +58,11 @@ return (
   <body>
     <!-- Import react and react-dom -->
     <script
-      src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"
+      src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"
+      src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"
       crossorigin
     ></script>
     <!-- Import metrics widget -->
