@@ -1,6 +1,6 @@
 {
   "name": "metrics-widget",
-  "version": "1.8.2",
+  "version": "1.9.0",
   "description": "Display book usage metrics",
   "main": "./dist/index.js",
   "scripts": {
