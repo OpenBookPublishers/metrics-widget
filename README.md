@@ -87,4 +87,4 @@ Both the react component and the vanilla JS function support the following param
 |-----------------|:--------:|----------------------------------------|-----------------------------------------------------|
 | `doi`           | required | n/a                                    | The DOI of the work we are displaying data about.   |
 | `apiEndpoint`   | optional | `"https://metrics-api.operas-eu.org/"` | The API to consume.                                 |
-| `fullReportUrl` | optional | `null`                                 | Optional URL to a more detailed vie of the metrics. |
+| `fullReportUrl` | optional | `null`                                 | Optional URL to a more detailed view of the metrics. |
